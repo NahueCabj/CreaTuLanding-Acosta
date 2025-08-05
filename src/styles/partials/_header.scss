@@ -1,0 +1,33 @@
+@use './variables' as v;
+
+.navbar {
+    background-color: v.$color-principal;
+    padding: 1rem;
+}
+
+.logo {
+    color: v.$color-secundario;
+    font-family: "Badeen Display", system-ui;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.navitem {
+    color: v.$color-blanco;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+
+.li-item {
+    transition: color 0.3s ease;
+        &:hover {
+        color: v.$color-secundario
+        }
+}
+
+.carrito-compras{
+    color: v.$color-secundario
+}
+
