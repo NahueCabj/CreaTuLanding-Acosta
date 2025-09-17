@@ -1,33 +1,50 @@
 @use './variables' as v;
 
 .navbar {
-    background-color: v.$color-principal;
-    padding: 1rem;
+  background-color: v.$color-principal; // fondo principal
+  padding: 1rem;
 }
 
 .logo {
-    color: v.$color-secundario;
-    font-family: "Badeen Display", system-ui;
-    font-weight: 400;
-    font-size: 2rem;
-}
-
-.navitem {
-    color: v.$color-blanco;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-
+  font-family: "Badeen Display", system-ui;
+  font-weight: 400;
+  font-size: 2rem;
+  color: v.$color-secundario; // solo color, no display ni flex
 }
 
 .li-item {
-    transition: color 0.3s ease;
-        &:hover {
-        color: v.$color-secundario
-        }
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #c49a6c;
+  }
 }
 
-.carrito-compras{
-    color: v.$color-secundario
+.carrito-compras {
+  color: v.$color-secundario;
 }
+
+/* CTA button solo estilos, no display ni responsive */
+.cta-button-hover {
+  display: block;
+  padding: 16px 40px;
+  background: #d44e2c;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0 auto;
+
+  &:hover {
+    background: #bf3c1a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 78, 44, 0.3);
+  }
+}
+
 

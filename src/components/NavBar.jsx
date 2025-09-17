@@ -1,46 +1,75 @@
-import CartWidget from './CartWidget';
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
+
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="navbar shadow-md">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative z-10">
-        <NavLink to={'/'}>
-          <div className="logo text-2xl font-bold text-indigo-700">
+    <header className="navbar relative shadow-md">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+        {/* Logo */}
+        <NavLink to="/">
+          <div className="logo text-2xl font-bold text-white md:text-indigo-700">
             KIKA Coffe Roasters
           </div>
         </NavLink>
-        <ul className="navitem flex space-x-20 text-gray-700 font-medium">
-          <li>
-            <NavLink to={'/'} className="li-item">INICIO</NavLink>
+
+        {/* Desktop menu */}
+        <ul className="hidden md:!flex gap-10 text-white font-medium">
+          <li className="li-item"><NavLink to="/" className="hover:text-[#c49a6c]">INICIO</NavLink></li>
+          <li className="li-item relative group">
+            <NavLink to="/products" className="hover:text-[#c49a6c]">PRODUCTOS</NavLink>
+            <ul className="absolute left-0 top-full mt-2 w-48 bg-white text-[#3e2c20] shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+            <li className="first:rounded-t-lg last:rounded-b-lg overflow-hidden">
+              <NavLink to="/categories/Nuestros cafes" className="block px-4 py-2 hover:bg-indigo-100">
+                Nuestros Cafés
+              </NavLink>
             </li>
-          <li className="relative group">
-            <a href="#" className="li-item">PRODUCTOS</a>
-            <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
-              <li>
-                <NavLink to={'/categories/Nuestros cafes'} className="block px-4 py-2 text-[#5c4033] hover:bg-indigo-100">
-                  Nuestros Cafés
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/categories/Cafeteras y métodos'} className="block px-4 py-2 text-[#5c4033] hover:bg-indigo-100">
-                  Cafeteras y metodos
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/categories/Accesorios'} className="block px-4 py-2 text-[#5c4033] hover:bg-indigo-100">
-                  Accesorios
-                </NavLink>
-              </li>
-            </ul>
+            <li className="overflow-hidden">
+              <NavLink to="/categories/Cafeteras y métodos" className="block px-4 py-2 hover:bg-indigo-100">
+                Cafeteras y métodos
+              </NavLink>
+            </li>
+            <li className="first:rounded-t-lg last:rounded-b-lg overflow-hidden">
+              <NavLink to="/categories/Accesorios" className="block px-4 py-2 hover:bg-indigo-100">
+                Accesorios
+              </NavLink>
+            </li>
+          </ul>
           </li>
-
-          <li><a href="#" className="li-item">NOSOTROS</a></li>
-          <li><a href="#" className="li-item">CONTACTO</a></li>
+          <li className="li-item"><NavLink to="/contacto" className="hover:text-[#c49a6c]">CONTACTO</NavLink></li>
+          <li className="li-item"><NavLink to={'/nosotros'} href="#" className="hover:text-[#c49a6c]">NOSOTROS</NavLink></li>
         </ul>
-        <CartWidget numberItems={3} />
-      </nav>
-  </header>
 
+        {/* Mobile: hamburger + cart */}
+        <div className="flex md:!hidden items-center gap-4">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white md:!hidden !block focus:outline-none text-2xl z-50"
+          >
+            ☰
+          </button>
+          <NavLink to="/cartview"><CartWidget /></NavLink>
+        </div>
+
+        {/* Desktop cart */}
+        <div className="hidden md:!block">
+          <NavLink to="/cartview"><CartWidget /></NavLink>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <ul className="md:!hidden bg-[#3e2c20] w-full flex flex-col items-center py-6 space-y-4 shadow-lg absolute top-full left-0 z-50">
+          <li><NavLink to="/" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>INICIO</NavLink></li>
+          <li><NavLink to="/products" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>PRODUCTOS</NavLink></li>
+          <li><NavLink to="/contacto" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>CONTACTO</NavLink></li>
+          <li><a href="#" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>NOSOTROS</a></li>
+        </ul>
+      )}
+    </header>
   );
 }

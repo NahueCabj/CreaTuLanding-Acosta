@@ -1,0 +1,194 @@
+// LocationSection.scss
+.location-section {
+  padding: 80px 20px;
+  background-color: #fcfcfc;
+  font-family: 'Roboto', sans-serif;
+
+  .location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .location-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .location-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    font-family: 'Badeen Display', system-ui, sans-serif;
+    letter-spacing: 2px;
+  }
+
+  .location-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #d44e2c;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+
+  .location-subtitle {
+    font-size: 1.2rem;
+    color: #6a5747;
+    font-weight: 600;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+    align-items: start;
+  }
+
+  .map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    position: relative;
+  }
+
+  .map-iframe {
+    border: 0;
+    border-radius: 12px;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-card {
+    background-color: #F3EEE8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .info-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .info-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Badeen Display', system-ui, sans-serif;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(106, 87, 71, 0.1);
+  }
+
+  .schedule-days {
+    font-size: 0.95rem;
+    color: #6a5747;
+    font-weight: 500;
+  }
+
+  .schedule-hours {
+    font-size: 0.95rem;
+    color: #d44e2c;
+    font-weight: 600;
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    .location-content {
+      gap: 40px;
+    }
+
+    .map-container {
+      height: 350px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+
+    .location-header {
+      margin-bottom: 40px;
+    }
+
+    .location-title {
+      font-size: 2rem;
+    }
+
+    .location-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .location-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .map-container {
+      height: 300px;
+    }
+
+    .info-container {
+      gap: 25px;
+    }
+
+    .info-card {
+      padding: 25px;
+    }
+
+    .info-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .location-title {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .location-subtitle {
+      font-size: 1rem;
+    }
+
+    .map-container {
+      height: 250px;
+    }
+
+    .info-card {
+      padding: 20px;
+    }
+
+    .info-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .schedule-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  }
+}

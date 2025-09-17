@@ -1,0 +1,30 @@
+.swal-popup {
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.swal-title {
+  font-weight: 600;
+  color: #5a3e2b;
+  font-size: 1.4rem;
+}
+
+/* contenedor de botones dentro de la alerta */
+.swal-actions {
+  display: inline-flex !important;   /* fila */
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* forzamos que los .btn dentro de la alerta no sean full-width */
+.swal-actions .btn,
+.swal-actions .swal-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  padding: 0.6rem 1rem;
+}

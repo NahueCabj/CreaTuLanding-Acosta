@@ -1,16 +1,8 @@
-const productos = [
+export const productos = [
     // ===== Nuestros Cafés =====
+  
     {
-        id: 1,
-        name: 'Café Colombia Supremo',
-        description: 'Notas a chocolate y frutos rojos, tostado medio.',
-        category: 'Nuestros cafes',
-        stock: 15,
-        price: 850,
-        img: 'https://i.postimg.cc/5N0gH84s/colombia-cafe.webp'
-    },
-    {
-        id: 2,
+        
         name: 'Café Etiopía Sidamo',
         description: 'Aromas florales y cítricos, acidez brillante.',
         category: 'Nuestros cafes',
@@ -19,7 +11,7 @@ const productos = [
         img: 'https://i.postimg.cc/BQVg2tt4/etiopia-cafe.webp'
     },
     {
-        id: 3,
+        
         name: 'Blend Espresso Intenso',
         description: 'Cuerpo alto, perfecto para espresso.',
         category: 'Nuestros cafes',
@@ -30,7 +22,7 @@ const productos = [
 
     // ===== Cafeteras y Métodos =====
     {
-        id: 4,
+        
         name: 'Cafetera Espresso Breville Bambino',
         description: 'Cafetera compacta para espresso y cappuccino.',
         category: 'Cafeteras y métodos',
@@ -39,7 +31,7 @@ const productos = [
         img: 'https://i.postimg.cc/CMNr6Tkz/breville-bambino.jpg'
     },
     {
-        id: 5,
+        
         name: 'Método V60 Hario 02',
         description: 'Método de filtrado japonés para café limpio y aromático.',
         category: 'Cafeteras y métodos',
@@ -48,7 +40,7 @@ const productos = [
         img: 'https://i.postimg.cc/wjtWv1Pm/v60.jpg'
     },
     {
-        id: 6,
+        
         name: 'Prensa Francesa Bodum 1L',
         description: 'Ideal para café de cuerpo medio y texturizado.',
         category: 'Cafeteras y métodos',
@@ -59,7 +51,7 @@ const productos = [
 
     // ===== Accesorios =====
     {
-        id: 7,
+       
         name: 'Tamper de Acero Inoxidable 58mm',
         description: 'Base plana y mango ergonómico para espresso.',
         category: 'Accesorios',
@@ -68,7 +60,7 @@ const productos = [
         img: 'https://i.postimg.cc/W1Q5J2Lf/tamper.webp'
     },
     {
-        id: 8,
+        
         name: 'Pitcher para Latte Art 600ml',
         description: 'Perfecto para espumar y verter leche.',
         category: 'Accesorios',
@@ -77,7 +69,7 @@ const productos = [
         img: 'https://i.postimg.cc/c4L9p9BT/pitcher.webp'
     },
     {
-        id: 9,
+        
         name: 'Distribuidor de Café 58mm',
         description: 'Logra una extracción uniforme en tu espresso.',
         category: 'Accesorios',

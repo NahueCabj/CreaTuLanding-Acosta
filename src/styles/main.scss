@@ -4,9 +4,35 @@
 @use './partials/cards';
 @use './partials/descripcionCards';
 @use './partials/errorComponent';
-
+@use './partials/itemCount';
+@use './partials/cartView';
+@use './partials/chekout';
+@use './partials/alerts';
+@use './partials/nosotros';
+@use './partials/location';
+@use './partials/faqsection';
 
 /*Fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; 
+}
+
+footer {
+  margin-top: 0;
+}
