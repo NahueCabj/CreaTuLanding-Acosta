@@ -8,7 +8,6 @@ const CategoriesSection = () => {
 
   };
 
-e
   useEffect(() => {
     const styleSheet = document.styleSheets[0];
     
