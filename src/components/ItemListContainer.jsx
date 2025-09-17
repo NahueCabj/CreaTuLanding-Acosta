@@ -12,7 +12,7 @@ const ItemListContainer = (props) => {
   const [loader, setLoader] = useState(false);
   const { category } = useParams();
 
-  // 🔠 Capitalizar categoría (opcional)
+  
   const formatCategory = (cat) => {
     if (!cat) return "";
     return cat.charAt(0).toUpperCase() + cat.slice(1);

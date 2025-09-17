@@ -1,12 +1,80 @@
-# React + Vite
+☕ Kika Coffee Roasters - E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue desarrollado como parte del curso de ReactJS con el objetivo de aprender y aplicar conceptos fundamentales de React en el desarrollo de aplicaciones web modernas.
 
-Currently, two official plugins are available:
+La aplicación consiste en un e-commerce de una cafetería, donde los usuarios pueden navegar por productos, ver detalles, agregar artículos al carrito y completar una compra mediante un formulario validado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+ReactJS → Librería principal para la construcción de la interfaz.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React Router DOM → Manejo de rutas y navegación entre páginas.
+
+Firebase Firestore → Base de datos en la nube para persistencia de órdenes.
+
+Context API → Gestión del estado global del carrito de compras.
+
+SCSS + TailwindCSS → Estilos personalizados y diseño responsive.
+
+📌 Características principales
+
+🔹 Catálogo de productos con categorías y detalle de cada ítem.
+
+🔹 Carrito de compras persistente durante la sesión.
+
+🔹 Formulario de checkout validado (nombre, email, teléfono, dirección).
+
+🔹 Confirmación de compra con generación de ID en Firebase.
+
+🔹 Diseño responsive: adaptado para desktop y dispositivos móviles.
+
+🔹 Navegación clara mediante barra superior y menú hamburguesa.
+
+📂 Estructura de carpetas (simplificada)
+src/
+ ├─ components/       # Componentes reutilizables (NavBar, Footer, Cart, etc.)
+ ├─ context/          # Context API para el carrito
+ ├─ service/          # Configuración de Firebase
+ ├─ styles/           # Estilos SCSS principales
+ ├─ App.js            # Configuración de rutas y layout
+ └─ main.jsx          # Punto de entrada de la aplicación
+
+🛠️ Instalación y uso
+
+Clonar el repositorio:
+
+git clone https://github.com/tuusuario/tu-repo.git
+cd tu-repo
+
+
+Instalar dependencias:
+
+npm install
+
+
+Ejecutar en modo desarrollo:
+
+npm run dev
+
+
+Abrir en el navegador:
+
+http://localhost:5173/
+
+🎯 Objetivo del proyecto
+
+El propósito principal de este proyecto es aprender ReactJS poniendo en práctica:
+
+Manejo de componentes y props.
+
+Uso de hooks (useState, useContext, useEffect).
+
+Implementación de rutas dinámicas con React Router.
+
+Integración con Firebase Firestore.
+
+Buenas prácticas en estructuración de proyectos y estilos.
+
+✨ Autor
+
+Desarrollado por Nahuel Acosta como proyecto final del curso de ReactJS.

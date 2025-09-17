@@ -1,7 +1,7 @@
 @use './variables' as v;
 
 .navbar {
-  background-color: v.$color-principal; // fondo principal
+  background-color: v.$color-principal; 
   padding: 1rem;
 }
 
@@ -9,7 +9,7 @@
   font-family: "Badeen Display", system-ui;
   font-weight: 400;
   font-size: 2rem;
-  color: v.$color-secundario; // solo color, no display ni flex
+  color: v.$color-secundario; 
 }
 
 .li-item {
@@ -24,7 +24,6 @@
   color: v.$color-secundario;
 }
 
-/* CTA button solo estilos, no display ni responsive */
 .cta-button-hover {
   display: block;
   padding: 16px 40px;

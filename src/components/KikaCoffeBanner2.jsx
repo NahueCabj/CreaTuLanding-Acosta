@@ -5,7 +5,7 @@ const FullImageBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Activar animaciones después de un breve delay
+    
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
@@ -15,9 +15,9 @@ const FullImageBanner = () => {
     };
   }, []);
 
-  // Añadir reglas CSS al montar el componente
+ 
   useEffect(() => {
-    // Animación para el botón CTA
+   
     const ctaHoverRule = `
       .cta-button-hover:hover {
         background: #bf3c1a !important;
@@ -26,7 +26,7 @@ const FullImageBanner = () => {
       }
     `;
     
-    // Insertar las reglas CSS
+   
     const styleSheet = document.styleSheets[0];
     try {
       styleSheet.insertRule(ctaHoverRule, styleSheet.cssRules.length);
@@ -37,11 +37,11 @@ const FullImageBanner = () => {
 
   return (
     <div style={styles.bannerContainer}>
-      {/* Imagen de fondo */}
+     
       <div style={styles.backgroundImage}>
         <div style={styles.imageOverlay}></div>
         
-        {/* Contenido superpuesto */}
+        
         <div style={styles.content}>
           <div style={styles.textContent}>
             <div style={{
@@ -104,7 +104,7 @@ const FullImageBanner = () => {
         </div>
       </div>
       
-      {/* Elementos gráficos decorativos */}
+      
       <div style={styles.graphicElements}>
         <div style={styles.circleElement}></div>
         <div style={styles.semiCircleElement}></div>
@@ -113,7 +113,7 @@ const FullImageBanner = () => {
   );
 };
 
-// Estilos en JavaScript - Banner con imagen de fondo completa
+
 const styles = {
   bannerContainer: {
     position: 'relative',
@@ -248,7 +248,7 @@ const styles = {
   },
 };
 
-// Añadir keyframes para animaciones
+
 if (typeof document !== 'undefined') {
   const styleSheet = document.styleSheets[0];
   styleSheet.insertRule(`

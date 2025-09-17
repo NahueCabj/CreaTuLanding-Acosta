@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
-import EmptyCart from './EmptyCart' // <-- asegurate que coincida con el export real
+import EmptyCart from './EmptyCart' 
 import Swal from 'sweetalert2'
 
 
@@ -12,7 +12,7 @@ const CartView = () => {
     return <EmptyCart />
   }
 
-  const handleVaciarCarrito = () => { // <-- SIN parámetro
+  const handleVaciarCarrito = () => { 
     Swal.fire({
       title: "¿Vaciar carrito?",
       text: "Se eliminarán todos los productos seleccionados",
@@ -25,14 +25,14 @@ const CartView = () => {
       customClass: {
         popup: "swal-popup",
         title: "swal-title",
-        actions: "swal-actions",                    // importante: target para alinear botones
+        actions: "swal-actions",                    
         confirmButton: "btn btn--danger swal-btn",
         cancelButton: "btn btn--secondary swal-btn",
       },
       buttonsStyling: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        clear(); // ahora sí llama a la función del contexto
+        clear(); 
         Swal.fire({
           title: "Carrito vacío",
           text: "Tu carrito quedó vacío, ¡agregá un café para continuar! ☕",

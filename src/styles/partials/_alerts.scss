@@ -10,16 +10,14 @@
   font-size: 1.4rem;
 }
 
-/* contenedor de botones dentro de la alerta */
 .swal-actions {
-  display: inline-flex !important;   /* fila */
+  display: inline-flex !important;   
   gap: 0.75rem;
   justify-content: center;
   margin-top: 1rem;
   width: 100%;
 }
 
-/* forzamos que los .btn dentro de la alerta no sean full-width */
 .swal-actions .btn,
 .swal-actions .swal-btn {
   display: inline-flex !important;

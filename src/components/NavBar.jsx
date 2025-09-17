@@ -10,7 +10,7 @@ export default function NavBar() {
     <header className="navbar relative shadow-md">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
 
-        {/* Logo */}
+        
         <NavLink to="/">
           <div className="logo text-2xl font-bold text-white md:text-indigo-700">
             KIKA Coffe Roasters
@@ -44,7 +44,7 @@ export default function NavBar() {
           <li className="li-item"><NavLink to={'/nosotros'} href="#" className="hover:text-[#c49a6c]">NOSOTROS</NavLink></li>
         </ul>
 
-        {/* Mobile: hamburger + cart */}
+        
         <div className="flex md:!hidden items-center gap-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ export default function NavBar() {
           <NavLink to="/cartview"><CartWidget /></NavLink>
         </div>
 
-        {/* Desktop cart */}
+        
         <div className="hidden md:!block">
           <NavLink to="/cartview"><CartWidget /></NavLink>
         </div>
@@ -67,7 +67,7 @@ export default function NavBar() {
           <li><NavLink to="/" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>INICIO</NavLink></li>
           <li><NavLink to="/products" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>PRODUCTOS</NavLink></li>
           <li><NavLink to="/contacto" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>CONTACTO</NavLink></li>
-          <li><a href="#" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>NOSOTROS</a></li>
+          <li><NavLink to="/nosotros" className="text-white hover:text-[#c49a6c]" onClick={() => setIsOpen(false)}>NOSOTROS</NavLink></li>
         </ul>
       )}
     </header>

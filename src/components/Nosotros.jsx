@@ -21,7 +21,7 @@ const AboutUsSection = () => {
     ? <LoaderComponent/>
     :
     <section className="about-section">
-      {/* Hero Banner */}
+      
       <div className="hero-banner">
         <div className="hero-overlay"></div>
         <div className="hero-content">
@@ -39,7 +39,7 @@ const AboutUsSection = () => {
       </div>
 
       <div className="container">
-        {/* Nuestra Historia */}
+        
         <div className="intro-section">
           <div className="intro-content">
             <h2 className="section-title">NUESTRA HISTORIA</h2>
@@ -62,7 +62,7 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* Lo que nos define */}
+        
         <div className="values-section">
           <h2 className="section-title">LO QUE NOS DEFINE</h2>
           <div className="divider"></div>
@@ -94,7 +94,7 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* Nuestro Compromiso */}
+        
         <div className="process-section">
           <div className="process-image">
             <img
@@ -131,7 +131,7 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* CTA */}
+        
         <div className="cta-section">
           <h2>¿LISTO PARA DESCUBRIR TU PRÓXIMO CAFÉ FAVORITO?</h2>
           <Link to={'/products'} className="cta-button">EXPLORAR COLECCIÓN</Link>

@@ -11,14 +11,12 @@ export default function Footer() {
             KIKA Coffe Roasters
         </div>
         </Link>
-        
-
-        {/* Texto */}
+      
         <p className="text-sm text-center md:text-left">
           &copy; {new Date().getFullYear()} Mi Tienda. Todos los derechos reservados.
         </p>
 
-        {/* Links */}
+        
         <div className="flex gap-4">
           <a href="#" className="hover:text-gray-300 transition">Instagram</a>
           <a href="#" className="hover:text-gray-300 transition">Facebook</a>

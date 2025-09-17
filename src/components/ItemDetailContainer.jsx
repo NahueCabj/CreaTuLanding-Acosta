@@ -43,19 +43,6 @@ if(invalid){
     </div>
   )
 }
-
-
-
-//promesa
-
-  // useEffect(() => {
-  //   setCargando(true)
-  //   getItem(id)
-  //     .then((res) => setProd(res))
-  //     .catch((error) => console.log(error))
-  //     .finally(()=> setCargando(false))
-  // }, [id]);
-
   return (
     <>
   {cargando
